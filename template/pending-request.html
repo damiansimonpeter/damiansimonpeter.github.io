@@ -1,0 +1,32 @@
+        <div class="col-md-12">
+            <div class="col-md-12">
+                <h2>Pending Requests</h2>
+                <h5>See below all Users requesting to join your event. </h5>
+            </div>
+        </div>
+        <!-- /. ROW  -->
+
+<div class="col-md-12">
+    <hr />
+
+
+    <div class="panel panel-back noti-box" ng-repeat="item in requests">
+                <span class="icon-box bg-color-green set-icon">
+                    <i class="fa fa-calendar"></i>
+                </span>
+            <div class="text-box" >
+                <div class="pull-left">
+                <p class="main-text">{{item.name}}</p>
+                <p class="text-muted"><span class="badge alert-danger">pending</span></p>
+                </div>
+                <p class="pull-right">
+                    <button class="btn btn-success">Approve</button>
+                    <button class="btn btn-danger">cancel</button>
+                </p>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+
+
+
+</div>

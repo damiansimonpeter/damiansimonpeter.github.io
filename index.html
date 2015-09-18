@@ -1,68 +1,85 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Damian Simon Peter | github.com </title>
-		
-		<style>
-.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
-  padding-right: 0;
-}
-</style>
-		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
-<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	</head>
-
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Kandela - Easy event manager</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.min.css">
+    <link href="css/crosscover.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/kandela.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="bc12-kalendar/../images//icon.jpg">
+    <script src="//cdn.firebase.com/js/client/2.0.3/firebase.js"></script>
+    <script src="js/configuration.js"></script>
+    <script src="js/firebaseutil.js"></script>
+    <script src="js/attendee.js"></script>
+    <script src="js/event.js"></script>
+    <script src="js/invite.js"></script>
+    <script src="js/join.js"></script>
+</head>
 <body>
-	
-	
-	
-	
-	
-	<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--waterfall">
-    <!-- Top row, always visible -->
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Damian Simon Peter</span>
-      <div class="mdl-layout-spacer"></div>
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                  mdl-textfield--floating-label mdl-textfield--align-right">
-        <label class="mdl-button mdl-js-button mdl-button--icon"
-               for="waterfall-exp">
-          <i class="material-icons">search</i>
-        </label>
-        <div class="mdl-textfield__expandable-holder">
-          <input class="mdl-textfield__input" type="text" name="sample"
-                 id="waterfall-exp" />
-        </div>
-      </div>
-    </div>
-    <!-- Bottom row, not visible on scroll -->
-    <div class="mdl-layout__header-row">
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Home</a>
-        <a class="mdl-navigation__link" href="">Repo</a>
-        <a class="mdl-navigation__link" href="">Projects</a>
-        <a class="mdl-navigation__link" href="">About</a>
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Navigation</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Fork</a>
-      <a class="mdl-navigation__link" href="">Star</a>
-      <a class="mdl-navigation__link" href="">Code</a>
-      <a class="mdl-navigation__link" href="">Tutorials</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-    <div class="page-content"><!-- Your content goes here --></div>
-  </main>
+<div ng-app="app" ng-controller="ctrl" ng-class="animation">
+<div class="logo pull-left">
+    <img src="images/logo.png" style="max-width: 150px;" />
 </div>
+  <div class="links">
+    <a href="#/login">About Kandela</a>
+    <a href="#/register">Feedback</a>
+  </div>
+  <div ng-view class="view kandela-home">
+
+  </div>
+    <div class='box crosscover'>
+        <div class="crosscover-list">
+            <div class="crosscover-item">
+                <img src="bc12-kalendar/../images/1.jpg" alt="image01"/>
+            </div>
+            <div class="crosscover-item">
+                <img src="bc12-kalendar/../images/2.jpg" alt="image02"/>
+            </div>
+            <div class="crosscover-item">
+                <img src="bc12-kalendar/../images/3.jpg" alt="image03"/>
+            </div>
+            <div class="crosscover-item">
+                <img src="bc12-kalendar/../images/4.jpg" alt="image04"/>
+            </div>
+            <div class="crosscover-item">
+                <img src="bc12-kalendar/../images/5.jpg" alt="image05"/>
+            </div>
+            <div class="crosscover-item">
+                <img src="bc12-kalendar/../images/6.jpg" alt="image06"/>
+            </div>
+
+        </div>
+        <img src="bc12-kalendar/../images/icon.jpg">
+
+
+    </div>
+<div class="footer-home">
+    <ul>
+        <li><a href="#">Terms and Condition</a> </li>
+        <li><a href="#">Privacy Policy</a> </li>
+        <li><a href="#">API Documentation</a> </li>
+    </ul>
+</div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+<script src="js/crosscover.js" charset="utf-8"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-route.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-animate.min.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+    <script src="js/app.js"></script>
+<script>
+    $(document).on('ready', function(){
+        $('.crosscover').crosscover({
+            // controller: true,
+            dotNav: true
+        });
+    });
+</script>
 
 </body>
 </html>
